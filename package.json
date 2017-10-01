@@ -1,0 +1,22 @@
+{
+  "name": "duckling-diary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.14"
+  },
+  "devDependencies": {
+    "express": "^4.16.1"
+  }
+}

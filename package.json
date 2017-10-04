@@ -1,20 +1,20 @@
 {
   "name": "duckling-diary",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "mongodb": "^2.2.31",
-    "mongoose": "^4.10.8"
+    "mongoose": "^4.10.8",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "hbs": "~4.0.1",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
     "express": "^4.16.1"

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 var babySchema = new mongoose.Schema({
   name:{
     type: String,
-    require: true
+    required: true
   },
   gener:{
     type: String,
@@ -27,10 +27,24 @@ var babySchema = new mongoose.Schema({
 
 var Baby = module.exports = mongoose.model('Baby',babySchema,'Babies');
 
-module.exports.getBabies = (callback, limit) => {
+module.exports.getBaby = (callback, limit) => {
   Baby.find(callback).limit(limit);
 }
 
-module.exports.addBabies = (baby,callback) => {
+module.exports.getBabyById = (id,callback) => {
+  Baby.findById(id,callback);
+}
+
+module.exports.addBaby = (baby,callback) => {
   Baby.create(baby,callback);
+}
+
+module.exports.updateBabyInfo = (id, baby, options, callback) => {
+  let query = {_id:id};
+  Baby.findOneAndUpdate(query, baby, options, callback);
+}
+
+module.exports.deleteBabyInfo = (id,callback) => {
+  let query = {_id:id};
+  Baby.remove(query,callback);
 }

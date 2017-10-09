@@ -13,7 +13,7 @@ const babies = require ('./routes/babies');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/duckling');
+mongoose.connect('mongodb://127.0.0.1:27017/duckling');
 
 var db = mongoose.connection;
 
